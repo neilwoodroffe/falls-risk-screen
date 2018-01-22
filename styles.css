@@ -1,0 +1,66 @@
+/*This Falls Risk Screen was developed by Neil Woodroffe, Occupational Therapist in 2018*/
+/*Feel free to use/modify this application using the MIT license*/
+
+#div1, #div3, #div5, #div7, #div9, #div11, #div13, #div15, #div17, #div19, #div21, #div23, #div25, #div27 {
+    color: red;
+
+}
+#div2, #div4, #div6, #div8, #div10, #div12, #div14, #div16, #div18, #div20, #div22, #div24, #div26, #div28 {
+    color: blue;
+
+}
+div[role=alert] {
+text-align: center;
+}
+
+div[class=centerDiv]{
+margin: 0 auto;
+}
+
+p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+button {
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+   
+}
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+
+form {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+div[class=centerDiv] {
+    width: 200px;
+    margin: 0 auto;
+
+}
+input[type=number]{
+    width: 42px;
+}
+input[name=year]{
+    width: 80px;
+}
+
+
+
+

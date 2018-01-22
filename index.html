@@ -1,0 +1,253 @@
+<!--This Falls Risk Screen was developed by Neil Woodroffe, Occupational Therapist in 2018-->
+<!--Feel free to use/modify this application using the MIT license-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+    <div class="alert alert-warning" role="alert">    
+        <h1> Falls Risk Screen </h1>
+    </div>
+
+<form>
+<div class="centerDiv">
+    First name:<br>
+        <input type="text" name="firstname">
+        <br>
+    Last name:<br>
+        <input type="text" name="lastname">
+        <br>
+    Date of Birth (dd/mm/yyyy):<br>
+        <!-- input type="text" name="DOB"-->
+        <input type="number" name="day" min="1" max="31">&nbsp/&nbsp<input type="number" name="month" min="1" max="12">&nbsp/&nbsp<input type="number" name="year" min="1918" max="2068"><!--input id="date" type="date"-->
+        <br>
+        <br>
+</div>
+
+        If you answer yes to any of the following questions, you have an increased falls risk!
+        <br>
+        <br>
+
+    <strong>1. Have you recently had a fall?</strong>
+        <input type="radio" id="showform1" value="yes1" name="showform1" onchange="showhideForm1(this.value);"/>Yes
+        <input type="radio" id="showform1" value="no1" name="showform1" onchange="showhideForm1(this.value);"/>No
+        <br>
+        <br>
+
+    <div id="div1" style="display:none">
+        Contact your GP immediately to discuss treatment options and strategies to prevent further falls.<br><br>
+    </div>
+    <div id="div2" style="display:none">
+        Stay safe, maintain a healthy lifestyle and keep linked with your GP.<br><br>
+    </div>
+
+
+    <strong>2. Have you recently lost your balance?</strong>
+        <input type="radio" id="showform2" value="yes2" name="showform2" onchange="showhideForm2(this.value);"/>Yes
+        <input type="radio" id="showform2" value="no2" name="showform2" onchange="showhideForm2(this.value);"/>No
+        <br>
+        <br>
+
+    <div id="div3" style="display:none">
+        You may need help from a Physiotherapist or Podiatrist to assess your balance, gait and feet. Talk with your GP about a referral.<br><br>
+    </div>
+    <div id="div4" style="display:none">
+        Regular exercise can help you to maintain balance. Talk with your GP if problems arise.<br><br>
+    </div>
+
+
+    <strong>3. Are you physically inactive (less than 30 minutes of physical activity per day)?</strong>
+
+        <input type="radio" id="showform3" value="yes3" name="showform3" onchange="showhideForm3(this.value);"/>Yes
+        <input type="radio" id="showform3" value="no3" name="showform3" onchange="showhideForm3(this.value);"/>No
+        <br>
+        <br>
+
+    <div id="div5" style="display:none">
+        Talk with your GP about your suitablity to commence an exercise program. You may need a referral to an Exercise Physiologist.<br><br>
+    </div>
+    <div id="div6" style="display:none">
+        Regular exercise can help to prevent falls. Ask your GP about exercise programs in your local community.<br><br>
+    </div>
+
+    <strong>4. Do you have a neurological (e.g. stroke) or musculoskeletal condition that affects your balance?</strong>
+        
+    
+        <input type="radio" id="showform4" value="yes4" name="showform4" onchange="showhideForm4(this.value);"/>Yes
+        <input type="radio" id="showform4" value="no4" name="showform4" onchange="showhideForm4(this.value);"/>No
+        <br>
+        <br>
+    
+    <div id="div7" style="display:none">
+        Attend your GP regularly for a medical review. You may also need a Physiotherapist and/or Occupational Therapist to provide treatment and review assistive equipment for your home.<br><br>
+    </div>
+    <div id="div8" style="display:none">
+        If you are concerned about any neurological or musculoskeletal problems, then talk with your GP.<br><br>
+    </div>
+
+    <strong>5. Do you need a walking aid?</strong>
+
+    <input type="radio" id="showform5" value="yes5" name="showform5" onchange="showhideForm5(this.value);"/>Yes
+    <input type="radio" id="showform5" value="no5" name="showform5" onchange="showhideForm5(this.value);"/>No
+    <br>
+    <br>
+
+    <div id="div9" style="display:none">
+        You may need help from a Physiotherapist or Occupational Therapist to prescribe you an adequate mobility aid. Talk with your GP about a referral.<br><br>
+    </div>
+    <div id="div10" style="display:none">
+        Regular exercise can help to maintain lower limb strength and mobility. Talk with your GP if mobility problems arise.<br><br>
+    </div>
+
+    <strong>6. Do you require supervision or assistance with transfers or activities of daily living (ADL)?</strong>
+
+    <input type="radio" id="showform6" value="yes6" name="showform6" onchange="showhideForm6(this.value);"/>Yes
+    <input type="radio" id="showform6" value="no6" name="showform6" onchange="showhideForm6(this.value);"/>No
+    <br>
+    <br>
+
+    <div id="div11" style="display:none">
+        You may require an ADL Assessment or Home Environment Assessment from an Occupational Therapist. Talk with your GP about a referral.<br><br>
+    </div>
+    <div id="div12" style="display:none">
+        If your capacity to perform everyday activities declines, then talk with your GP.<br><br>
+    </div>
+
+    <strong>7. Do you have problems with your vision?</strong>
+
+    <input type="radio" id="showform7" value="yes7" name="showform7" onchange="showhideForm7(this.value);"/>Yes
+    <input type="radio" id="showform7" value="no7" name="showform7" onchange="showhideForm7(this.value);"/>No
+    <br>
+    <br>
+
+    <div id="div13" style="display:none">
+        Please attend your GP or local Optometrist for a Visual Assessment.<br><br>
+    </div>
+    <div id="div14" style="display:none">
+        If you are concerned about your vision in the future, then attend your GP or local Optometrist for a Visual Assessment.<br><br>
+    </div>
+
+    <strong>8. Have you been confused, delirious or diagnosed with a cognitive disorder?</strong>
+
+    <input type="radio" id="showform8" value="yes8" name="showform8" onchange="showhideForm8(this.value);"/>Yes
+    <input type="radio" id="showform8" value="no8" name="showform8" onchange="showhideForm8(this.value);"/>No
+    <br>
+    <br>
+
+    <div id="div15" style="display:none">
+        Talk to your GP immediately about the need for a cognitive assessment and/or other medical investigations. You may require a referral for a Functional Cognitive Assessment from an Occupational Therapist or Psychologist.<br><br>
+    </div>
+    <div id="div16" style="display:none">
+        If you start to have difficulties with your memory, orientation or thoughts, then talk with your GP immediately.<br><br>
+    </div>
+
+    <strong>9. Do you have new onset or existing incontinence?</strong>
+
+    <input type="radio" id="showform9" value="yes9" name="showform9" onchange="showhideForm9(this.value);"/>Yes
+    <input type="radio" id="showform9" value="no9" name="showform9" onchange="showhideForm9(this.value);"/>No
+    <br>
+    <br>
+
+    <div id="div17" style="display:none">
+        See your GP for medical investigation. You may require a referral for a Continence Assessment. Free Helpline ph: 1800 330 066, <a href="https://www.continence.org.au">Continence Foundation of Australia.</a><br><br>
+    </div>
+    <div id="div18" style="display:none">
+        If you start to have any problems with your continence, see your GP.<br><br>
+    </div>
+
+    <strong>10. Are you taking multiple medications or medications that cause sedation?</strong>
+
+    <input type="radio" id="showform10" value="yes10" name="showform10" onchange="showhideForm10(this.value);"/>Yes
+    <input type="radio" id="showform10" value="no10" name="showform10" onchange="showhideForm10(this.value);"/>No
+    <br>
+    <br>
+
+    <div id="div19" style="display:none">
+        See your GP regularly for a medication review.<br><br>
+    </div>
+    <div id="div20" style="display:none">
+        If you are taking any medications it is still important to attend your GP for a regular review. You should at least attend your GP for an annual check-up.<br><br>
+    </div>
+
+    <strong>11. Do you consume excessive amounts of alcohol or use illicit drugs?</strong>
+
+    <input type="radio" id="showform11" value="yes11" name="showform11" onchange="showhideForm11(this.value);"/>Yes
+    <input type="radio" id="showform11" value="no11" name="showform11" onchange="showhideForm11(this.value);"/>No
+    <br>
+    <br>
+
+    <div id="div21" style="display:none">
+        You may require a referral to a Drug and Alcohol Service. Talk to your GP about a referral.<br><br>
+    </div>
+    <div id="div22" style="display:none">
+        To reduce the risk of alcohol related disease then drink  <a href="http://www.alcohol.gov.au/internet/alcohol/publishing.nsf/Content/guide-adult" >no more than 2 drinks on any day and do not exceed 4 drinks on a single occasion </a>. Avoid using illicit drugs.<br><br>
+    </div>
+
+    <strong>12. Do you experience dizziness or light headedness when standing from a seated position or have a recent history of fainting?</strong>
+
+    <input type="radio" id="showform12" value="yes12" name="showform12" onchange="showhideForm12(this.value);"/>Yes
+    <input type="radio" id="showform12" value="no12" name="showform12" onchange="showhideForm12(this.value);"/>No
+    <br>
+    <br>
+
+    <div id="div23" style="display:none">
+        Attend your GP immediately for a postural blood pressure test or further medical investigations.<br><br>
+    </div>
+    <div id="div24" style="display:none">
+        If you suddenly experience any of these symptoms see your GP immediately.<br><br>
+    </div>
+
+    <strong>13. Have you recently sustained a fracture from a minor bump or fall or have a history of osteoporosis?</strong>
+
+    <input type="radio" id="showform13" value="yes13" name="showform13" onchange="showhideForm13(this.value);"/>Yes
+    <input type="radio" id="showform13" value="no13" name="showform13" onchange="showhideForm13(this.value);"/>No
+    <br>
+    <br>
+
+    <div id="div25" style="display:none">
+        Talk with your GP about causes of osteoporosis and treatment options.<br><br>
+    </div>
+    <div id="div26" style="display:none">
+        Osteoporosis is preventable. <a href= "https://www.brokenbones.net.au/">Women (yes and men) older than 50 are at greater risk of developing osteoporosis.</a> Talk with your GP about prevention options.<br><br>
+    </div>
+
+    <strong>14. Does your home environment have cluttered furniture, trip hazards, poor lighting, uneven/slippery surfaces, stairs or loose floor coverings?</strong>
+
+    <input type="radio" id="showform14" value="yes14" name="showform14" onchange="showhideForm14(this.value);"/>Yes
+    <input type="radio" id="showform14" value="no14" name="showform14" onchange="showhideForm14(this.value);"/>No
+    <br>
+    <br>
+
+    <div id="div27" style="display:none">
+        You may require a Home Environment Assessment from an Occupational Therapist. Talk with your GP about a referral.<br><br>
+    </div>
+    <div id="div28" style="display:none">
+        In the future if you notice any potential falls risks in the home, then please talk to your GP about an Occupational Therapy Home Environment Assessment.<br><br>
+    </div>
+
+</form>
+
+    <div id= "divfinal" style="display:none" class="alert alert-success" role="alert">
+        <strong>Well done!</strong> You successfully completed this important risk assessment.&nbsp<a href="https://about.healthdirect.gov.au/nhsd" class="alert-link">Talk to your GP or follow this link to find local health services.</a>
+        <br>
+        Remember in an emergency always call 000 or attend your local hospital emergency department!
+	<br>
+	<a href="https://www.stayonyourfeet.com.au" class="alert-link">Find more info on the Stay On Your Feet website.</a>
+    </div>
+    
+    <p><button onclick="myFunction()">Print this page</button>&nbsp Click this button to print (or save as PDF) this page to show your GP.</p>
+
+<script type="text/javascript" src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+</body>
+</html>
