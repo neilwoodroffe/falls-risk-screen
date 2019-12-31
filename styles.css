@@ -50,12 +50,12 @@ form {
 }
 
 div[class=centerDiv] {
-    width: 200px;
+    width: 220px;
     margin: 0 auto;
 
 }
 input[type=number]{
-    width: 42px;
+    width: 50px;
 }
 input[name=year]{
     width: 80px;
